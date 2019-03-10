@@ -1,0 +1,19 @@
+/* Quiz style */
+.quiz-box {
+  margin: auto;
+  width: 500px;
+  text-align: center;
+
+}
+
+#quiz{
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+  position: relative;
+  padding: 10px;
+}
+
+.question {
+  padding: 10px;
+}
