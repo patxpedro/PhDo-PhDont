@@ -1,23 +1,31 @@
 var myQuestions = [
 	{
-		question: "What is 10/2?",
+		question: "Do you want to do a PhD?",
 		answers: {
-			a: '3',
-			b: '5',
-			c: '115'
+			a: 'Yes',
+			b: 'No',
+			c: 'I don\'t know / I already have one'
 		},
-		correctAnswer: 'b'
+		//correctAnswer: ''
 	},
 	{
-		question: "What is 30/3?",
+		question: "How do you feel about research?",
 		answers: {
-			a: '3',
-			b: '5',
-			c: '10'
+			a: 'It\'s so exciting!',
+			b: 'Labs are not for me',
+			c: 'Been there, done that!'
 		},
-		correctAnswer: 'c'
-	}
-];
+	//	correctAnswer: 'c'
+	},
+	{
+		question: "Are you willing to sacriffice parts of your life?",
+		answers: {
+			a: 'YES!',
+			b: 'Not really. I want to keep my social life!',
+			c: 'I am done with that...'
+		},
+		//correctAnswer: 'c'
+	}];
 
 //next line not needed
 //function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
@@ -72,10 +80,14 @@ function showResults(questions, quizContainer, resultsContainer){
 
 	// keep track of user's answers
 	var userAnswer = '';
-	var numCorrect = 0;
+	var numAanswers = 0;
+	var numBanswers = 0;
+	var numCanswers = 0;
 
 	// for each question...
-	for(var i=0; i<questions.length; i++){
+	// for(var i=0; i<questions.length; i++){
+	var i = 0;
+	while(i < 3){
 
 		// find selected answer
     //|| operator, which means "or" to basically say "Give us the selected answer OR if there's not one, then just give us an empty object."
@@ -84,22 +96,50 @@ function showResults(questions, quizContainer, resultsContainer){
 
 		// if answer is correct
     //triple equals --> testing for strict equality. This means both the type and the value we are comparing have to be the same.
-		if(userAnswer===questions[i].correctAnswer){
+		if(userAnswer==='a'){
 			// add to the number of correct answers
-			numCorrect++;
+			numAanswers++;
 
 			// color the answers green
-			answerContainers[i].style.color = 'lightgreen';
+			answerContainers[i].style.color = 'limegreen';
 		}
 		// if answer is wrong or blank
-		else{
+		else if(userAnswer==='b'){
+			numBanswers++;
 			// color the answers red
+			answerContainers[i].style.color = 'GoldenRod';
+		}
+		else if(userAnswer==='c'){
+			numCanswers++;
+				// color the answers red
+				answerContainers[i].style.color = 'Royalblue';
+		}
+			// if answer is wrong or blank
+		else {
 			answerContainers[i].style.color = 'red';
 		}
+
+		i=i+1;
+	}
+
+	if (numAanswers > numBanswers && numAanswers > numCanswers) {
+		resultsContainer.innerHTML = "More A answers";
+	} else if (numBanswers > numAanswers && numBanswers > numCanswers) {
+		resultsContainer.innerHTML = "More B answers";
+	} else if (numCanswers > numAanswers && numCanswers > numBanswers) {
+		resultsContainer.innerHTML = "More C answers";
+	} else if (numAanswers == numBanswers && numBanswers === numCanswers) {
+		resultsContainer.innerHTML = "We can't help you!";
+	} else if (numAanswers === numBanswers) {
+		resultsContainer.innerHTML = "Same a and b, less c";
+	} else if (numBanswers === numCanswers) {
+		resultsContainer.innerHTML = "Same b and c, less a";
+	} else if (numAanswers === numCanswers) {
+		resultsContainer.innerHTML = "Same a and c, less b";
 	}
 
 	// show number of correct answers out of total
-	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+//	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
 
