@@ -17,3 +17,9 @@
 .question {
   padding: 10px;
 }
+
+.options{
+  margin: auto;
+  width: 1000px;
+  text-align: center;
+}
