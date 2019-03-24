@@ -1,0 +1,80 @@
+h2{  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 30px}
+
+h3{  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 20px}
+
+h4{  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 15px}
+
+.img-responsive {
+  width:400px;
+  height:220px;
+}
+
+
+
+/* footer style */
+.footer {
+  background: #000000;
+  padding: 10px 0;
+}
+
+.footer a {
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+/* .footer a:first-child {
+  border-left: 1px solid #70726F; */
+/* }
+.footer a:hover {
+  color: white;
+} */
+
+/* socialmediabuttons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  /* border-radius: 80% */
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
