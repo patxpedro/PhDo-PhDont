@@ -1,0 +1,100 @@
+/* headerstyle */
+.navbar-default {
+    background-color:#FFFFFF;
+    border-color: #FFFFFF;
+    font-size: 16px;
+  }
+
+
+body {
+  background: #FFFFFF;
+}
+
+.a{
+  color: #FFFFFF;
+}
+
+.wrapper {
+  padding: 40px 40px;
+  margin: 10px;
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 60%;
+	vertical-align: middle;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.svg-content {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* // line {
+//   //position: relative;
+//   z-index: -1;
+// }
+
+// rect {
+//   //position: relative;
+//   z-index: 1;
+// } */
+
+/* footer style */
+.footer {
+  background: #000000;
+  padding: 10px 0;
+}
+
+.footer a {
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+/* .footer a:first-child {
+  border-left: 1px solid #70726F; */
+/* }
+.footer a:hover {
+  color: white;
+} */
+
+/* socialmediabuttons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  /* border-radius: 80% */
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
