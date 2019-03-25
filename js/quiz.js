@@ -127,7 +127,7 @@ function showResults(questions, quizContainer, resultsContainer){
 	} else if (numAanswers == numBanswers && numBanswers === numCanswers) {
 		resultsContainer.innerHTML = "So indicisive... Your need to help us help you!";
 	} else if (numAanswers === numBanswers) {
-		resultsContainer.innerHTML = "So indicisive... Your need to help us help you!"; //Same a and b, less c
+		resultsContainer.innerHTML = "So indecisive... Your need to help us help you!"; //Same a and b, less c
 	} else if (numBanswers === numCanswers) {
 		resultsContainer.innerHTML = "We think a PhD is not for you!"; //Same b and c, less a
 	} else if (numAanswers === numCanswers) {
