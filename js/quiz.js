@@ -6,7 +6,6 @@ var myQuestions = [
 			b: 'No',
 			c: 'I don\'t know / I already have one'
 		},
-		//correctAnswer: ''
 	},
 	{
 		question: "How do you feel about research?",
@@ -15,7 +14,7 @@ var myQuestions = [
 			b: 'Labs are not for me',
 			c: 'Been there, done that!'
 		},
-	//	correctAnswer: 'c'
+
 	},
 	{
 		question: "Are you willing to sacriffice parts of your life?",
@@ -24,12 +23,9 @@ var myQuestions = [
 			b: 'Not really. I want to keep my social life!',
 			c: 'I am done with that...'
 		},
-		//correctAnswer: 'c'
+
 	}];
 
-//next line not needed
-//function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-// }
 
 function showQuestions(questions, quizContainer){
 
@@ -123,19 +119,19 @@ function showResults(questions, quizContainer, resultsContainer){
 	}
 
 	if (numAanswers > numBanswers && numAanswers > numCanswers) {
-		resultsContainer.innerHTML = "More A answers";
+		resultsContainer.innerHTML = "PhDo - Please scroll down";
 	} else if (numBanswers > numAanswers && numBanswers > numCanswers) {
-		resultsContainer.innerHTML = "More B answers";
+		resultsContainer.innerHTML = "PhDon't - Please scroll down";
 	} else if (numCanswers > numAanswers && numCanswers > numBanswers) {
-		resultsContainer.innerHTML = "More C answers";
+		resultsContainer.innerHTML = "Scroll down to move on and away from academia...";
 	} else if (numAanswers == numBanswers && numBanswers === numCanswers) {
-		resultsContainer.innerHTML = "We can't help you!";
+		resultsContainer.innerHTML = "So indicisive... Your need to help us help you!";
 	} else if (numAanswers === numBanswers) {
-		resultsContainer.innerHTML = "Same a and b, less c";
+		resultsContainer.innerHTML = "So indicisive... Your need to help us help you!"; //Same a and b, less c
 	} else if (numBanswers === numCanswers) {
-		resultsContainer.innerHTML = "Same b and c, less a";
+		resultsContainer.innerHTML = "We think a PhD is not for you!"; //Same b and c, less a
 	} else if (numAanswers === numCanswers) {
-		resultsContainer.innerHTML = "Same a and c, less b";
+		resultsContainer.innerHTML = "You seem to be thinking ahead! But do your PhD first!"; //Same a and c, less b
 	}
 
 	// show number of correct answers out of total
